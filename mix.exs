@@ -24,7 +24,7 @@ defmodule Layers.MixProject do
       files: [
         "mix.exs",
         "native/layers/src",
-        "native/layers/.cargo/config",
+        "native/layers/.cargo/config.toml",
         "native/layers/Cargo.toml",
         "native/layers/Cargo.lock",
         "lib",
