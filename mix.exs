@@ -29,6 +29,7 @@ defmodule Layers.MixProject do
         "native/layers/.cargo/config.toml",
         "native/layers/Cargo.toml",
         "native/layers/Cargo.lock",
+        "checksum-*.exs",
         "lib",
         "LICENSE",
         "README.md",
