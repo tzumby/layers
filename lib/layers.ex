@@ -11,7 +11,8 @@ defmodule Layers do
     base_url: "https://github.com/tzumby/layers/releases/download/v#{version}",
     force_build: System.get_env("RUSTLER_PRECOMPILATION_EXAMPLE_BUILD") in ["1", "true"],
     targets:
-      Enum.uniq(["aarch64-unknown-linux-musl" | RustlerPrecompiled.Config.default_targets()]),
+      RustlerPrecompiled.Config.default_targets() --
+        ["aarch64-unknown-linux-musl", "x86_64-unknown-linux-musl"],
     version: version
 
   def from_bytes(_bytes), do: :erlang.nif_error(:nif_not_loaded)
