@@ -1,10 +1,12 @@
 defmodule Layers.MixProject do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :layers,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.14",
       description: description(),
       source_url: "",
@@ -49,6 +51,7 @@ defmodule Layers.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:rustler_precompiled, "~> 0.4"},
       {:rustler, "~> 0.26.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
